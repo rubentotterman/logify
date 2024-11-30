@@ -48,4 +48,16 @@ const workoutBarChart = new Chart(ctx, {
   }, 
 });
 
-
+// Example data: Days worked out this year
+const workedOutDays = [
+    "2024-01-01", "2024-01-03", "2024-01-07", "2024-02-14", "2024-03-21", 
+    "2024-04-05", "2024-05-10", "2024-06-12", "2024-07-18", "2024-08-20"
+  ]; // Add more dates as needed
+  
+  // Calculate the total number of days worked out
+  const totalWorkoutDays = workedOutDays.length;
+  
+  // Update the HTML to display the count
+  const workoutDaysElement = document.getElementById('workout-days');
+  workoutDaysElement.textContent = `${totalWorkoutDays} Days`;
+  

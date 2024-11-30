@@ -45,24 +45,19 @@
               </div>
               
         </div>
-        <div class="bg-customdark rounded-lg col-span-4 py-4 px-4 font-bold text-white shadow-md">
+        <div class="bg-customdark rounded-lg col-span-4 py-4 px-4 font-bold text-white shadow-md flex justify-center items-center">
             <!--Header-->
             <div>
-                <div class="mb-4">
+                <div class="mb-4 justify-center flex">
                     <h1>Activity Calendar</h1>
                 </div>
-                <div class="grid grid-cols-7 gap-2 text-center justify-between font-light text-xs">
-                    <div>M</div>
-                    <div>T</div>
-                    <div>W</div>
-                    <div>T</div>
-                    <div>F</div>
-                    <div>S</div>
-                    <div>S</div>
-                </div>
-                <!-- Dates Grid -->
-                <div id="calendar-grid" class="grid grid-cols-7 gap-2 text-center">
-                <!-- Days will be dynamically generated -->
+                 <!-- Workout Days Circle -->
+                  
+                <div id="workout-circle" class=" w-40 h-40 rounded-full bg-purple-700 flex items-center justify-center">
+                    <div class="flex flex-col justify-center items-center gap-2">
+                        <p id="workout-days" class="text-2xl font-semibold text-white"></p>
+                         <i class="fa-solid fa-fire text-orange-500"></i>
+                    </div>
                 </div>
             </div>
         </div>
