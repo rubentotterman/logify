@@ -14,6 +14,7 @@ module.exports = {
         //Custom colors
         custombeige: '#bf7c12',
         customwhite: '#F4F1EC',
+        customdark: '#23262C',
       },
     },
   },
