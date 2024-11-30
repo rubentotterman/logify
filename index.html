@@ -28,7 +28,50 @@
     </div>
     <div class="grid grid-cols-6 gap-4 mt-24">
         <div class="bg-rose-400 text-white rounded-lg font-bold col-span-4 py-4 px-4">
-            <h1>Your Workout <br> Results for Today</h1>
+            <div class="card bg-beige p-6 rounded-lg flex items-center gap-6">
+                <!-- Text Content -->
+                <div class="text-content">
+                  <h2 class="text-lg font-bold text-gray-800">Your Workout</h2>
+                  <h3 class="text-md font-semibold text-gray-800">Results for Today</h3>
+              
+                  <div class="legend mt-4 space-y-2">
+                    <div class="flex items-center gap-2">
+                      <span class="w-4 h-4 bg-yellow-500 rounded-full"></span>
+                      <span class="text-sm text-gray-700">Calories intake</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <span class="w-4 h-4 bg-red-500 rounded-full"></span>
+                      <span class="text-sm text-gray-700">Calories burned</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <span class="w-4 h-4 bg-black rounded-full"></span>
+                      <span class="text-sm text-gray-700">Activity time</span>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- Visual Content -->
+                <div class="bubbles flex justify-center items-center">
+                  <!-- Black Bubble -->
+                  <div class=" bg-black text-white text-center p-4 rounded-full w-16 h-16 flex flex-col justify-center items-center">
+                    <span class="text-md font-bold">2.30</span>
+                    <span class="text-xs">hours</span>
+                  </div>
+              
+                  <!-- Red Bubble -->
+                  <div class=" bg-red-500 bg-opacity-70 text-white text-center p-6 rounded-full w-24 h-24 flex flex-col justify-center items-center">
+                    <span class="text-lg font-bold">850</span>
+                    <span class="text-sm">kcal</span>
+                  </div>
+              
+                  <!-- Yellow Bubble -->
+                  <div class=" bg-yellow-500 bg-opacity-70 text-black text-center p-8 rounded-full w-40 h-40 flex flex-col justify-center items-center">
+                    <span class="text-lg font-bold">1,875</span>
+                    <span class="text-sm">kcal</span>
+                  </div>
+                </div>
+              </div>
+              
         </div>
         <div class="bg-purple-800 rounded-lg col-span-2 py-4 px-4 font-bold text-white">
             <h1>Your Training Days</h1>
@@ -84,14 +127,14 @@
                 <p></p>
             </div>
         </div>
-        <div class="bg-yellow-200 col-span-2 py-4 px-4">
-            <h1>Content</h1>
+        <div class="bg-black col-span-2 py-4 px-4 rounded-lg font-bold text-white">
+            <h1>Steps for Today</h1>
         </div>
-        <div class="bg-blue-600 col-span-4 py-4 px-4">
-            <h1>Content</h1>
+        <div class="bg-green-200 col-span-4 row-span-2 py-4 px-4 rounded-lg font-bold text-white">
+            <h1>My Habits</h1>
         </div>
-        <div class="bg-blue-600 col-span-2 py-4 px-4">
-            <h1>Content</h1>
+        <div class="bg-blue-600 col-span-2 py-4 px-4 rounded-lg font-bold text-white">
+            <h1>Weight Loss Plan</h1>
         </div>
   </div>
   <script src="script.js"></script>
