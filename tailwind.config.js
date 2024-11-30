@@ -9,7 +9,13 @@ module.exports = {
       center: true, // Centers the container by default
       padding: "1rem", //Adds default padding (adjust as needed)
     },
-    extend: {},
+    extend: {
+      colors: {
+        //Custom colors
+        custombeige: '#bf7c12',
+        customwhite: '#F4F1EC',
+      },
+    },
   },
   plugins: [],
 };
