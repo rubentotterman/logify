@@ -27,28 +27,18 @@
         </div>
     </div>
     <div class="grid grid-cols-12 grid-rows-[auto_auto] gap-4 mt-24">
-        <div class="bg-rose-400 text-white rounded-lg font-bold col-span-8 py-4 px-4">
-            <div class="card bg-beige p-6 rounded-lg flex items-center gap-6">
+        <div class="bg-rose-400 text-white rounded-lg font-bold col-span-8 py-2 px-4">
+            <div class="card bg-beige p-6 rounded-lg gap-6">
                 <!-- Text Content -->
-                <div class="text-content">
-                  <h2 class="text-lg font-bold">Your Workout</h2>
-                  <h3 class="text-md font-semibold">Results for Today</h3>
-              
-                  <div class="legend mt-4 space-y-2">
-                    <div class="flex items-center gap-2">
-                      <span class="w-4 h-4 bg-yellow-500 rounded-full"></span>
-                      <span class="text-sm text-gray-700">Calories intake</span>
+                <div class="text-content whitespace-nowrap flex justify-center items-center h-full">
+                    <div>
+                        <h2 class="text-lg font-bold">Your Workout</h2>
+                        <p class="text-sm font-semibold">Results for Today</p>
                     </div>
-                    <div class="flex items-center gap-2">
-                      <span class="w-4 h-4 bg-red-500 rounded-full"></span>
-                      <span class="text-sm text-gray-700">Calories burned</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                      <span class="w-4 h-4 bg-black rounded-full"></span>
-                      <span class="text-sm text-gray-700">Activity time</span>
-                    </div>
-                  </div>
                 </div>
+                <div class="chart-container mt-6">
+                    <canvas id="workoutBarChart"></canvas>
+                  </div>
               </div>
               
         </div>
@@ -106,7 +96,7 @@
                 <p></p>
             </div>
         </div>
-        <div class="bg-black col-span-6 row-span-1 py-4 px-4 rounded-lg font-bold text-white grid grid-cols-2 gap-16">
+        <div class="bg-white col-span-6 row-span-1 py-4 px-4 rounded-lg font-bold text-black grid grid-cols-2 gap-16">
             <div class="whitespace-nowrap flex flex-col justify-between h-full">
                 <div>
                     <h1 class="text-sm">Steps for Today</h1>
@@ -173,6 +163,7 @@
             <h1>Weight Loss Plan</h1>
         </div>
   </div>
-  <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
