@@ -7,9 +7,9 @@ const workoutBarChart = new Chart(ctx, {
     datasets: [
       {
         label: 'Workout Metrics',
-        data: [800, 850, 2.3], // Data values
+        data: [800, 850, 400], // Data values
         backgroundColor: [
-          '#000000', // Yellow for Calories Intake
+          '#23262C', // Yellow for Calories Intake
           '#9E2835', // Red for Calories Burned
           '#000000', // Black for Activity Time
         ],
@@ -47,4 +47,5 @@ const workoutBarChart = new Chart(ctx, {
     },
   }, 
 });
+
 
