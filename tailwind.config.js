@@ -10,6 +10,9 @@ module.exports = {
       padding: "1rem", //Adds default padding (adjust as needed)
     },
     extend: {
+      fontfamily: {
+        sans: ['Poppins', 'sans-serif'], //Replace the default sans-serif font
+      },
       colors: {
         //Custom colors
         custombeige: '#bf7c12',

@@ -3,12 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Workout Logger</title>
+  <title>Logify</title>
   <link href="output.css" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-    </style>
 </head>
 <body class="bg-customwhite">
     <!--Content wrapper (adjust values in config if needed)-->
@@ -17,13 +15,13 @@
     <!--Navbar content-->
     <div class="navbar flex justify-between text-[#23262C] pt-5">
         <div class="flex flex-col justify-center">
-            <h1 class="font-bold text-2xl">Hi, Charlotte!</h1>
+            <h1 class="font-bold text-2xl ">Hi, Charlotte!</h1>
             <p class="text-xs font-semibold">Lets take a look at your activity</p>
         </div>
         
         <div class="flex gap-4">
-            <button class="bg-white text-gray-700 px-2 rounded-lg text-xs w-44"><i class="fa-solid fa-magnifying-glass mr-2"></i>Search for health data</button>
-            <button class="bg-customdark text-white px-2 rounded-lg text-xs w-20">login</button>
+            <button class="bg-white text-gray-700 px-2 rounded-lg text-xs w-44 shadow-sm"><i class="fa-solid fa-magnifying-glass mr-2"></i>Search for health data</button>
+            <button class="bg-customdark text-white px-2 rounded-lg text-xs w-20 shadow-md hover:bg-custombeige">login</button>
         </div>
     </div>
     <div class="grid grid-cols-12 grid-rows-[auto_auto] gap-4 mt-24">
@@ -49,11 +47,11 @@
             <!--Header-->
             <div>
                 <div class="mb-4 justify-center flex">
-                    <h1>Activity Calendar</h1>
+                    <h1>Activity Tracker</h1>
                 </div>
                  <!-- Workout Days Circle -->
                   
-                <div id="workout-circle" class=" w-40 h-40 rounded-full bg-purple-700 flex items-center justify-center">
+                <div id="workout-circle" class=" w-40 h-40 rounded-full bg-purple-700 shadow-md flex items-center justify-center">
                     <div class="flex flex-col justify-center items-center gap-2">
                         <p id="workout-days" class="text-2xl font-semibold text-white"></p>
                          <i class="fa-solid fa-fire text-orange-500"></i>
