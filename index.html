@@ -6,7 +6,7 @@
   <title>Logify</title>
   
   <link rel="stylesheet" href="./dist/output.css">
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="./src/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="bg-customwhite">
@@ -78,12 +78,12 @@
         </div>
         
         <!--Todays workout Card-->
-        <div class="bg-white text-black col-span-8 row-span-2 h-full py-4 px-4 rounded-lg shadow-md font-bold overflow-hidden">
+        <div class="bg-white text-black col-span-8 row-span-2 py-4 px-4 h-full rounded-lg shadow-md font-bold overflow-auto">
           <div class="flex justify-between items-center">
             <h1>Today's workout</h1>
             <p class="font-semibold text-xs">Add New</p>
           </div>
-          <div class="flex flex-col lg:flex-row sm:flex-col gap-1 w-full h-full sm:max-h-80">
+          <div class="flex flex-col lg:justify-center lg:items-center lg:flex-row sm:flex-col gap-1 w-full max-h-full sm:max-h-80">
             <div id="child" class="bg-purple-500 px-4 py-2 rounded-lg text-white flex-1 sm:w-full">
               <p>Pullups</p>
               <p>3x12</p>
@@ -100,15 +100,21 @@
               <p>Deadlifts</p>
               <p>5x10</p>
             </div>
+            <div id="child" class="bg-black px-4 py-2 rounded-lg text-white flex-1 sm:w-full">
+              <p>Deadlifts</p>
+              <p>5x10</p>
+            </div>
           </div>
         </div>
-
+        
         <!--Weightloss card-->
         <div class="bg-white col-span-4 row-span-1 py-4 px-4 rounded-lg font-bold text-black shadow-md">
             <h1>Weight Loss Plan</h1>
             <h1>Weight Loss Plan</h1>
             <h1>Weight Loss Plan</h1>
         </div>
+
+      
       
         <!--Footer-->
         <footer>

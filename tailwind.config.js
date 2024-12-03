@@ -1,14 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./index.html, ./main.js",
-    "./*.{html,js}",
-    "./src/**/*.{html,js}", // Include subdirectories if applicable
+    "./index.html", //Main HTML file.
+    "./main.js",  //Main JS file.
+    "./src/**/*.{html,js}", //All HTML and JS files in dir.
+    
   ],
   safelist: [
-    'xs:bg-green-500',
-    'tablet:bg-red-500',
-    'wide:bg-yellow-500',
+    'lg:justify-center',
+    'lg:items-center',
   ],
   theme: {
     container: {
@@ -21,7 +21,6 @@ module.exports = {
       md: '768px',  // Medium screens (e.g., tablets)
       lg: '1024px', // Large screens (e.g., laptops)
       xl: '1280px', // Extra large screens (e.g., desktops)
-      '2xl': '1536px', // Very large screens (e.g., widescreens)
     },
     extend: {
       fontFamily: {
