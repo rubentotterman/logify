@@ -13,8 +13,7 @@ Logify is a responsive and modern fitness tracker web application that helps use
 4. [Usage](#usage)
 5. [File Structure](#file-structure)
 6. [Screenshots](#screenshots)
-7. [Contributing](#contributing)
-8. [License](#license)
+7. [License](#license)
 
 ---
 
