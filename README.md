@@ -109,34 +109,6 @@ logify/
 ![Dashboard Screenshot](./assets/original-c6e09ed608f29be72311d9559590b273.png)
 
 
-
-## **Contributing**
-
-We welcome contributions! To get started:
-
-1. Fork this repository.
-2. Create a new branch:
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-3. Commit your changes:
-   ```bash
-   git commit -m "Add your feature"
-   ```
-4. Push your branch:
-   ```bash
-   git push origin feature/your-feature-name
-   ```
-5. Submit a pull request.
-
----
-
-## **License**
-
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
-
----
-
 ## **Acknowledgments**
 
 - Thanks to [Chart.js](https://www.chartjs.org/) for the charting library.
