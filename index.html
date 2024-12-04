@@ -13,13 +13,11 @@
     <!--Content wrapper (adjust values in config if needed)-->
   <div id="app" class="container">
 
-
-
      <!-- Sidebar -->
   <nav class="bg-lightPanel text-white w-20 h-screen fixed top-0 left-0 flex flex-col items-center justify-between py-6 space-y-8">
     <!-- Logo -->
     <div class="w-10 h-10 bg-lime-500 rounded-full flex items-center justify-center">
-      <span class="text-xl font-bold">H</span>
+      <span class="text-xl font-bold">C</span>
     </div>
     
     <!-- Navigation Links -->
@@ -51,7 +49,7 @@
         </div>
         
         <div class="flex gap-4">
-            <button class="bg-white text-gray-700 px-2 rounded-lg text-xs w-44 shadow-sm"><i class="fa-solid fa-magnifying-glass mr-2"></i>Search for health data</button>
+            <button class="bg-white text-gray-700 px-2 rounded-lg text-xs w-44 shadow-sm"><i class="fa-solid fa-magnifying-glass mr-2"></i>Search</button>
             <button class="bg-accentBlue text-white px-2 rounded-lg text-xs w-20 shadow-md hover:bg-custombeige">login</button>
         </div>
     </div>
@@ -79,12 +77,12 @@
         <div class="bg-softBlue text-white rounded-lg col-span-4 py-4 px-4 font-bold shadow-md flex justify-center items-center">
             <!--Header-->
             <div>
-                <div class="mb-4 justify-center flex">
+                <div class="mb-4 justify-center items-center flex">
                     <h1>Activity Tracker</h1>
                 </div>
                  <!-- Workout Days Circle -->
                   
-                <div id="workout-circle" class=" w-40 h-40 rounded-full bg-lightPanel shadow-md flex items-center justify-center">
+                <div id="workout-circle" class=" w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-lightPanel shadow-md flex items-center justify-center">
                     <div class="flex flex-col justify-center items-center gap-2">
                         <p id="workout-days" class="text-2xl font-semibold text-white"></p>
                          <i class="fa-solid fa-fire text-orange-500"></i>
@@ -115,7 +113,7 @@
             </div>
           </div>
           <div class="flex flex-col lg:justify-center lg:items-center lg:flex-row  gap-1 w-full h-full">
-            <div id="child" class="bg-darkBackground flex flex-col justify-between h-32 px-4 py-2 rounded-lg text-white font-thin  flex-1 sm:w-full">
+            <div id="child" class="bg-darkBackground flex flex-col justify-between h-60 px-4 py-2 rounded-lg text-white font-thin sm:w-full">
               <div class="flex justify-between">
                 <div class="">
                   <i class="fa-solid fa-person-running"></i>
@@ -127,7 +125,7 @@
                 <p class="font-bold">5km</p>
               </div>
             </div>
-            <div id="child" class="bg-darkBackground flex flex-col justify-between h-32 px-4 py-2 rounded-lg text-white font-thin  flex-1 sm:w-full">
+            <div id="child" class="bg-darkBackground flex flex-col justify-between h-60 px-4 py-2 rounded-lg text-white font-thin sm:w-full">
               <div class="flex justify-between">
                 <div class="">
                   <i class="fa-solid fa-person-running"></i>
@@ -139,7 +137,7 @@
                 <p class="font-bold">5km</p>
               </div>
             </div>
-            <div id="child" class="bg-darkBackground flex flex-col justify-between h-32 px-4 py-2 rounded-lg text-white font-thin  flex-1 sm:w-full">
+            <div id="child" class="bg-darkBackground flex flex-col justify-between h-60 px-4 py-2 rounded-lg text-white font-thin sm:w-full">
               <div class="flex justify-between">
                 <div class="">
                   <i class="fa-solid fa-person-running"></i>
@@ -151,7 +149,7 @@
                 <p class="font-bold">5km</p>
               </div>
             </div>
-            <div id="child" class="bg-darkBackground flex flex-col justify-between h-32 px-4 py-2 rounded-lg text-white font-thin  flex-1 sm:w-full">
+            <div id="child" class="bg-darkBackground flex flex-col justify-between h-60 px-4 py-2 rounded-lg text-white font-thin sm:w-full">
               <div class="flex justify-between">
                 <div class="">
                   <i class="fa-solid fa-person-running"></i>
@@ -189,7 +187,7 @@
       </div>
   </div>
 
-  <footer class="w-full bg-gray-800 text-white py-4 text-center mt-4">
+  <footer class="w-full bg-lightPanel text-white py-4 text-center mt-4">
         <p>This is a footer</p>
   </footer>
 
