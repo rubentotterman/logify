@@ -13,8 +13,7 @@ Logify is a responsive and modern fitness tracker web application that helps use
 4. [Usage](#usage)
 5. [File Structure](#file-structure)
 6. [Screenshots](#screenshots)
-7. [Contributing](#contributing)
-8. [License](#license)
+7. [License](#license)
 
 ---
 
@@ -106,39 +105,8 @@ logify/
 ## **Screenshots**
 
 ### **Dashboard**
-![Dashboard Screenshot](https://via.placeholder.com/800x400)
+![Dashboard Screenshot](./assets/original-c6e09ed608f29be72311d9559590b273.png)
 
-### **Workout Tracker**
-![Workout Tracker Screenshot](https://via.placeholder.com/800x400)
-
----
-
-## **Contributing**
-
-We welcome contributions! To get started:
-
-1. Fork this repository.
-2. Create a new branch:
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-3. Commit your changes:
-   ```bash
-   git commit -m "Add your feature"
-   ```
-4. Push your branch:
-   ```bash
-   git push origin feature/your-feature-name
-   ```
-5. Submit a pull request.
-
----
-
-## **License**
-
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
-
----
 
 ## **Acknowledgments**
 
