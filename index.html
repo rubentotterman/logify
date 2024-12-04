@@ -9,12 +9,12 @@
   <link rel="stylesheet" href="./src/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="bg-customwhite">
+<body class="bg-darkBackground">
     <!--Content wrapper (adjust values in config if needed)-->
   <div id="app" class="container">
 
     <!--Navbar content-->
-    <div class="navbar flex justify-between text-[#23262C] pt-5">
+    <div class="navbar flex justify-between text text-white pt-5">
         <div class="flex flex-col justify-center">
             <h1 class="font-bold text-2xl ">Hi, Charlotte!</h1>
             <p class="text-xs font-semibold">Lets take a look at your activity</p>
@@ -22,12 +22,12 @@
         
         <div class="flex gap-4">
             <button class="bg-white text-gray-700 px-2 rounded-lg text-xs w-44 shadow-sm"><i class="fa-solid fa-magnifying-glass mr-2"></i>Search for health data</button>
-            <button class="bg-customdark text-white px-2 rounded-lg text-xs w-20 shadow-md hover:bg-custombeige">login</button>
+            <button class="bg-accentBlue text-white px-2 rounded-lg text-xs w-20 shadow-md hover:bg-custombeige">login</button>
         </div>
     </div>
     <div class="grid grid-cols-12 grid-rows-[auto_auto] gap-4 mt-24 h-screen">
       <!--Chart Card-->
-        <div class="bg-custombeige text-white rounded-lg font-bold col-span-8 py-2 px-4 shadow-md">
+        <div class="bg-lightPanel text-white rounded-lg font-bold col-span-8 py-2 px-4 shadow-md">
             <div class="card bg-beige p-6 rounded-lg gap-6">
                 <!-- Text Content -->
                 <div class="text-content whitespace-nowrap h-full">
@@ -46,7 +46,7 @@
         </div>
 
         <!--Activity Tracker Card-->
-        <div class="bg-customdark rounded-lg col-span-4 py-4 px-4 font-bold text-white shadow-md flex justify-center items-center">
+        <div class="bg-softBlue text-white rounded-lg col-span-4 py-4 px-4 font-bold shadow-md flex justify-center items-center">
             <!--Header-->
             <div>
                 <div class="mb-4 justify-center flex">
@@ -54,7 +54,7 @@
                 </div>
                  <!-- Workout Days Circle -->
                   
-                <div id="workout-circle" class=" w-40 h-40 rounded-full bg-purple-700 shadow-md flex items-center justify-center">
+                <div id="workout-circle" class=" w-40 h-40 rounded-full bg-gray-800 shadow-md flex items-center justify-center">
                     <div class="flex flex-col justify-center items-center gap-2">
                         <p id="workout-days" class="text-2xl font-semibold text-white"></p>
                          <i class="fa-solid fa-fire text-orange-500"></i>
@@ -63,22 +63,21 @@
             </div>
         </div>
 
-        <!--Sleep Time-->
-        <div class="bg-white col-span-4 row-span-1 py-4 px-4 rounded-lg font-bold shadow-md text-black grid grid-cols-2 gap-16">
-            <div class="h-full">
-                <div>
-                    <h1 class="text-sm">Steps for Today</h1>
-                    <p class="font-semibold text-xs">Keep your body toned</p>
-                </div>
-                <div class="flex justify-center items-center">
-                  <p>2000</p>
-                </div>
-                <p class="text-sm font-semibold">Change goal<i class="fa-solid fa-pen ml-2"></i></p>
+        <!--Sleep Time -->
+        <div class="bg-lightPanel col-span-4 row-span-1 py-4 px-4 rounded-lg shadow-md text-white">
+           <div class="flex flex-col justify-between h-full">
+            <div class="flex justify-between">
+              <p class="font-bold">Sleep Time</p>
+              <i class="fa-solid fa-pen-to-square"></i>
             </div>
+            <div>
+              <p>Goal: <span class="font-bold"> 8 hours</span></p>
+            </div>
+           </div>
         </div>
         
         <!--My Activities Card-->
-        <div class="bg-white flex flex-col text-black col-span-8 row-span-2 py-4 px-4 h-full rounded-lg shadow-md font-bold overflow-auto">
+        <div class="bg-lightPanel flex flex-col text-white col-span-8 row-span-2 py-4 px-4 h-full rounded-lg shadow-md font-bold overflow-auto">
           <div class="flex justify-between">
             <h1 class="font-bold">My Activities</h1>
             <div class="flex justify-center items-center cursor-pointer">
@@ -86,7 +85,7 @@
             </div>
           </div>
           <div class="flex flex-col lg:justify-center lg:items-center lg:flex-row  gap-1 w-full h-full">
-            <div id="child" class="bg-purple-500 flex flex-col justify-between h-32 px-4 py-2 rounded-lg text-white font-thin  flex-1 sm:w-full">
+            <div id="child" class="bg-darkBackground flex flex-col justify-between h-32 px-4 py-2 rounded-lg text-white font-thin  flex-1 sm:w-full">
               <div class="flex justify-between">
                 <div class="">
                   <i class="fa-solid fa-person-running"></i>
@@ -98,7 +97,7 @@
                 <p class="font-bold">5km</p>
               </div>
             </div>
-            <div id="child" class="bg-purple-500 flex flex-col justify-between h-32 px-4 py-2 rounded-lg text-white font-thin  flex-1 sm:w-full">
+            <div id="child" class="bg-darkBackground flex flex-col justify-between h-32 px-4 py-2 rounded-lg text-white font-thin  flex-1 sm:w-full">
               <div class="flex justify-between">
                 <div class="">
                   <i class="fa-solid fa-person-running"></i>
@@ -110,7 +109,7 @@
                 <p class="font-bold">5km</p>
               </div>
             </div>
-            <div id="child" class="bg-purple-500 flex flex-col justify-between h-32 px-4 py-2 rounded-lg text-white font-thin  flex-1 sm:w-full">
+            <div id="child" class="bg-darkBackground flex flex-col justify-between h-32 px-4 py-2 rounded-lg text-white font-thin  flex-1 sm:w-full">
               <div class="flex justify-between">
                 <div class="">
                   <i class="fa-solid fa-person-running"></i>
@@ -122,7 +121,7 @@
                 <p class="font-bold">5km</p>
               </div>
             </div>
-            <div id="child" class="bg-purple-500 flex flex-col justify-between h-32 px-4 py-2 rounded-lg text-white font-thin  flex-1 sm:w-full">
+            <div id="child" class="bg-darkBackground flex flex-col justify-between h-32 px-4 py-2 rounded-lg text-white font-thin  flex-1 sm:w-full">
               <div class="flex justify-between">
                 <div class="">
                   <i class="fa-solid fa-person-running"></i>
@@ -138,20 +137,32 @@
         </div>
         
         <!--Weightloss card-->
-        <div class="bg-white col-span-4 row-span-1 py-4 px-4 rounded-lg font-bold text-black shadow-md">
-            <h1>Weight Loss Plan</h1>
-            <h1>Weight Loss Plan</h1>
-            <h1>Weight Loss Plan</h1>
+        <div class="bg-lightPanel col-span-4 row-span-1 py-4 px-4 rounded-lg  text-white shadow-md">
+          <div class="flex flex-col justify-between h-full">
+            <p>Weight Loss Goal</p>
+            <div class="p-4 rounded-lg w-full max-w-lg">
+              <!-- Progress Bar Container -->
+              <div class="relative h-4 bg-gray-600 rounded-full overflow-hidden">
+                <!-- Progress -->
+                <div class="absolute h-full bg-lime-500 rounded-full" style="width: 70%;"></div>
+              </div>
+              <!-- Labels -->
+              <div class="flex justify-between mt-2 text-sm">
+                <span>50kg</span>
+                <span>70kg</span>
+              </div>
+            </div>
+            
+            <p><span class="font-bold"> 80% </span> completed</p>
+          </div>  
         </div>
-
-      
-      
-        <!--Footer-->
-        <footer>
-          <h1>This is a footer</h1>
-        </footer>
-        
+      </div>
   </div>
+
+      <footer class="w-full bg-gray-800 text-white py-4 text-center mt-4">
+        <p>This is a footer</p>
+      </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="module" src="main.js"></script>
 </body>

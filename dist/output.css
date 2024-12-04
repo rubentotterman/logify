@@ -592,6 +592,22 @@ video {
   }
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
 .col-span-4 {
   grid-column: span 4 / span 4;
 }
@@ -612,12 +628,12 @@ video {
   margin-bottom: 1rem;
 }
 
-.ml-2 {
-  margin-left: 0.5rem;
-}
-
 .mr-2 {
   margin-right: 0.5rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .mt-24 {
@@ -628,12 +644,24 @@ video {
   margin-top: 1.5rem;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .flex {
   display: flex;
 }
 
 .grid {
   display: grid;
+}
+
+.h-32 {
+  height: 8rem;
+}
+
+.h-4 {
+  height: 1rem;
 }
 
 .h-40 {
@@ -646,22 +674,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-20 {
-  height: 5rem;
-}
-
-.h-10 {
-  height: 2.5rem;
-}
-
-.h-5 {
-  height: 1.25rem;
-}
-
-.h-32 {
-  height: 8rem;
 }
 
 .w-20 {
@@ -680,12 +692,12 @@ video {
   width: 100%;
 }
 
-.w-10 {
-  width: 2.5rem;
+.min-w-full {
+  min-width: 100%;
 }
 
-.w-5 {
-  width: 1.25rem;
+.max-w-lg {
+  max-width: 32rem;
 }
 
 .flex-1 {
@@ -698,10 +710,6 @@ video {
 
 .grid-cols-12 {
   grid-template-columns: repeat(12, minmax(0, 1fr));
-}
-
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .grid-rows-\[auto_auto\] {
@@ -728,10 +736,6 @@ video {
   gap: 0.25rem;
 }
 
-.gap-16 {
-  gap: 4rem;
-}
-
 .gap-2 {
   gap: 0.5rem;
 }
@@ -744,12 +748,12 @@ video {
   gap: 1.5rem;
 }
 
-.gap-3 {
-  gap: 0.75rem;
-}
-
 .overflow-auto {
   overflow: auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .whitespace-nowrap {
@@ -764,14 +768,14 @@ video {
   border-radius: 0.5rem;
 }
 
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
-}
-
 .bg-blue-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
+}
+
+.bg-blue-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
 }
 
 .bg-custombeige {
@@ -779,14 +783,24 @@ video {
   background-color: rgb(191 124 18 / var(--tw-bg-opacity, 1));
 }
 
-.bg-customdark {
+.bg-gray-600 {
   --tw-bg-opacity: 1;
-  background-color: rgb(35 38 44 / var(--tw-bg-opacity, 1));
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity, 1));
 }
 
-.bg-customwhite {
+.bg-gray-700 {
   --tw-bg-opacity: 1;
-  background-color: rgb(244 241 236 / var(--tw-bg-opacity, 1));
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+}
+
+.bg-lime-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(132 204 22 / var(--tw-bg-opacity, 1));
 }
 
 .bg-purple-500 {
@@ -794,19 +808,43 @@ video {
   background-color: rgb(168 85 247 / var(--tw-bg-opacity, 1));
 }
 
-.bg-purple-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(126 34 206 / var(--tw-bg-opacity, 1));
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
-.bg-blue-800 {
+.bg-darkBackground {
   --tw-bg-opacity: 1;
-  background-color: rgb(30 64 175 / var(--tw-bg-opacity, 1));
+  background-color: rgb(26 26 26 / var(--tw-bg-opacity, 1));
+}
+
+.bg-accentBlue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(89 115 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-lightPanel {
+  --tw-bg-opacity: 1;
+  background-color: rgb(42 42 42 / var(--tw-bg-opacity, 1));
+}
+
+.bg-softBlue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(44 59 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+}
+
+.bg-lightGray {
+  --tw-bg-opacity: 1;
+  background-color: rgb(176 176 176 / var(--tw-bg-opacity, 1));
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .p-6 {
@@ -835,6 +873,10 @@ video {
 
 .pt-5 {
   padding-top: 1.25rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-2xl {
@@ -867,15 +909,6 @@ video {
 
 .font-thin {
   font-weight: 100;
-}
-
-.font-extralight {
-  font-weight: 200;
-}
-
-.text-\[\#23262C\] {
-  --tw-text-opacity: 1;
-  color: rgb(35 38 44 / var(--tw-text-opacity, 1));
 }
 
 .text-black {
