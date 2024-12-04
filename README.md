@@ -108,10 +108,7 @@ logify/
 ### **Dashboard**
 ![Dashboard Screenshot](./assets/original-c6e09ed608f29be72311d9559590b273.png)
 
-### **Workout Tracker**
-![Workout Tracker Screenshot](https://via.placeholder.com/800x400)
 
----
 
 ## **Contributing**
 
