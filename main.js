@@ -1,3 +1,13 @@
+
+
+function toggleMenu() {
+  const menu = document.getElementById("mobileMenu");
+  menu.classList.toggle("hidden");
+}
+
+document.getElementById("hamburgerButton").addEventListener("click", toggleMenu);
+
+
 const ctx = document.getElementById('workoutBarChart').getContext('2d');
 
 const workoutBarChart = new Chart(ctx, {

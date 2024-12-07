@@ -42,7 +42,7 @@
     </nav>
 
     <!--Navbar content-->
-    <div class="navbar flex  justify-between text text-white pt-5">
+    <nav class="navbar flex justify-between text text-white pt-5">
         <div class="flex flex-col justify-center">
             <h1 class="font-bold text-2xl ">Hi, Charlotte!</h1>
             <p class="text-xs font-semibold">Lets take a look at your activity</p>
@@ -52,7 +52,27 @@
             <button class="bg-white text-gray-700 px-2 rounded-lg text-xs w-44 shadow-sm"><i class="fa-solid fa-magnifying-glass mr-2"></i>Search</button>
             <button class="bg-accentBlue text-white px-2 rounded-lg text-xs w-20 shadow-md hover:bg-custombeige">login</button>
         </div>
-    </div>
+
+        <!-- Hamburger Button (visible on smaller screens) -->
+        <button class="lg:hidden text-white" id="hamburgerButton">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+        <!--Menu (Hidden by default on small screens)-->
+        <div class="hidden lg:flex space-x-6 text-white" id="menu">
+          <a href="Home"></a>
+          <a href="About"></a>
+        </div>
+
+        <!-- Mobile Menu (hidden by default, shown when the hamburger is clicked) -->
+        <div class="lg:hidden hidden" id="mobileMenu">
+          <a href="#" class="block text-white py-2">Home</a>
+          <a href="#" class="block text-white py-2">About</a>
+          <a href="#" class="block text-white py-2">Services</a>
+          <a href="#" class="block text-white py-2">Contact</a>
+        </div>
+      </nav>
 
     <!--Start of grid-->
     <div class="grid grid-cols-12 gap-4 mt-24 flex-1">
@@ -76,7 +96,7 @@
         </div>
 
         <!--Activity Tracker Card-->
-        <div class="bg-softBlue text-white rounded-lg col-span-4 py-4 px-4 font-bold shadow-md flex justify-center items-center">
+        <div class="bg-accentBlue text-white rounded-lg col-span-4 py-4 px-4 font-bold shadow-md flex justify-center items-center">
             <!--Header-->
             <div>
                 <div class="mb-4 justify-center items-center flex">
@@ -108,14 +128,15 @@
         
         <!--My Activities Card-->
         <div class="bg-lightPanel flex flex-col text-white col-span-8 row-span-2 py-4 px-4 rounded-lg shadow-md font-bold ">
-          <div class="flex justify-between">
+          <div class="flex justify-between mb-4">
             <h1 class="font-bold">My Activities</h1>
             <div class="flex justify-center items-center cursor-pointer">
               <p class="font-semibold text-xs"><i class="fa-solid fa-plus"></i> Add New</p>
             </div>
           </div>
           <div class="flex flex-col lg:items-center lg:flex-row  gap-1 w-full h-full overflow-x-auto">
-            <div id="child" class="bg-darkBackground flex flex-col justify-between h-60 px-4 py-2 rounded-lg text-white font-thin sm:flex-1  ">
+            <!--First card-->
+            <div id="child" class="bg-darkBackground hover:bg-gray-800 flex flex-col justify-between h-60 px-4 py-2 rounded-lg text-white font-thin sm:flex-1  ">
               <div class="flex justify-between">
                 <div class="">
                   <i class="fa-solid fa-person-running"></i>
@@ -127,7 +148,8 @@
                 <p class="font-bold">5km</p>
               </div>
             </div>
-            <div id="child" class="bg-darkBackground flex flex-col justify-between h-60 px-4 py-2 rounded-lg text-white font-thin sm:flex-1  ">
+            <!--Second card-->
+            <div id="child" class="bg-darkBackground hover:bg-gray-800 flex flex-col justify-between h-60 px-4 py-2 rounded-lg text-white font-thin sm:flex-1  ">
               <div class="flex justify-between">
                 <div class="">
                   <i class="fa-solid fa-person-running"></i>
@@ -139,7 +161,8 @@
                 <p class="font-bold">5km</p>
               </div>
             </div>
-            <div id="child" class="bg-darkBackground flex flex-col justify-between h-60 px-4 py-2 rounded-lg text-white font-thin sm:flex-1  ">
+            <!--Third card-->
+            <div id="child" class="bg-darkBackground hover:bg-gray-800 flex flex-col justify-between h-60 px-4 py-2 rounded-lg text-white font-thin sm:flex-1  ">
               <div class="flex justify-between">
                 <div class="">
                   <i class="fa-solid fa-person-running"></i>
@@ -151,28 +174,11 @@
                 <p class="font-bold">5km</p>
               </div>
             </div>
-            <div id="child" class="bg-darkBackground flex flex-col justify-between h-60 px-4 py-2 rounded-lg text-white font-thin sm:flex-1 ">
-              <div class="flex justify-between">
-                <div class="">
-                  <i class="fa-solid fa-person-running"></i>
-                </div>
-                <i class="fa-solid fa-chevron-up"></i>
-              </div>
-              <div class="flex justify-between gap-4">
-                <p class="font-thin">Cardio</p>
-                <p class="font-bold">5km</p>
-              </div>
-            </div>
-            <div id="child" class="bg-darkBackground flex flex-col justify-between h-60 px-4 py-2 rounded-lg text-white font-thin sm:flex-1 ">
-              <div class="flex justify-between">
-                <div class="">
-                  <i class="fa-solid fa-person-running"></i>
-                </div>
-                <i class="fa-solid fa-chevron-up"></i>
-              </div>
-              <div class="flex justify-between gap-4">
-                <p class="font-thin">Cardio</p>
-                <p class="font-bold">5km</p>
+            <!--Fourth card-->
+            <div id="child" class="bg-darkBackground hover:bg-gray-800 flex h-60 px-4 py-2 rounded-lg border border-dashed border-green-500 text-white font-thin sm:flex-1 cursor-pointer ">
+              <div class="flex flex-col gap-2 items-center justify-center w-full h-full">
+                <p>Add</p>
+                <i class="fa-solid fa-plus"></i>
               </div>
             </div>
           </div>
@@ -202,8 +208,22 @@
   </div><!--End of wrapper-->
 
    <!--Footer-->
-   <footer class="w-full  bg-lightPanel text-white py-4 mt-20 flex justify-center items-center">
-    <h1 class="">Logify</h1>
+   <footer class="w-full h-full bg-lightPanel text-white py-4 px-12 mt-20">
+    <div class="w-full h-full flex justify-between">
+      <div><h1>Logify</h1></div>
+      <div class="flex flex-col items-center">
+        <h1>Contact</h1>
+        <p>Insert email here</p>
+      </div>
+      <div class="items-center flex flex-col">
+        <h2>About us</h2>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+        </ul>
+      </div>
+    </div>
   </footer>
 
       <!--Js file linked-->
