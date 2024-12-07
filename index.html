@@ -9,9 +9,9 @@
   <link rel="stylesheet" href="./src/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="bg-darkBackground flex flex-col">
+<body class="bg-darkBackground flex flex-col min-h-screen">
     <!--Content wrapper (adjust values in config if needed)-->
-  <div id="app" class="container flex flex-col">
+  <div id="app" class="container flex flex-1 flex-col">
 
     <!-- Sidebar -->
     <nav class="bg-lightPanel text-white w-20  fixed top-0 left-0 flex flex-col items-center justify-between py-6 space-y-8">
@@ -42,7 +42,7 @@
     </nav>
 
     <!--Navbar content-->
-    <div class="navbar flex justify-between text text-white pt-5">
+    <div class="navbar flex  justify-between text text-white pt-5">
         <div class="flex flex-col justify-center">
             <h1 class="font-bold text-2xl ">Hi, Charlotte!</h1>
             <p class="text-xs font-semibold">Lets take a look at your activity</p>
@@ -202,7 +202,7 @@
   </div><!--End of wrapper-->
 
    <!--Footer-->
-   <footer class="w-full bg-lightPanel text-white py-4 mt-20" style="margin-top: 2.5rem;>
+   <footer class="w-full  bg-lightPanel text-white py-4 mt-20 flex justify-center items-center">
     <h1 class="">Logify</h1>
   </footer>
 
