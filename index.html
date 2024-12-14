@@ -20,7 +20,7 @@
       <span class="text-xl font-bold">C</span>
     </div>
     
-    <!-- Navigation Links -->
+    <!-- Sidebar Navigation Links -->
     <div class="space-y-6">
         <a href="#" class="flex flex-col items-center text-gray-300 hover:text-white">
           <i class="fa-solid fa-chart-line text-lg"></i>
@@ -42,13 +42,13 @@
     </nav>
 
     <!--Navbar content-->
-    <nav class="navbar justify-between lg:flex md:flex text text-white pt-5 relative flex">
+    <nav class="navbar justify-between text text-white pt-5 relative flex">
         <div class="flex flex-col justify-center">
             <h1 class="font-bold text-2xl ">Hi, Charlotte!</h1>
             <p class="text-xs font-semibold">Lets take a look at your activity</p>
         </div>
         
-        <div class="flex gap-4 lg:flex sm:hidden md:hidden hidden">
+        <div class="gap-4 lg:flex md:hidden hidden">
             <button class="bg-white text-gray-700 px-2 rounded-lg text-xs w-44 shadow-sm"><i class="fa-solid fa-magnifying-glass mr-2"></i>Search</button>
             <button class="bg-accentBlue text-white px-2 rounded-lg text-xs w-20 shadow-md hover:bg-custombeige">login</button>
         </div> <!-- Hamburger Button (visible on smaller screens) -->
@@ -59,11 +59,28 @@
         </button>
 
         <!-- Mobile Menu (hidden by default, shown when the hamburger is clicked) -->
-        <div class="lg:hidden hidden" id="mobileMenu">
-          <a href="#" class="block text-white py-2">Home</a>
-          <a href="#" class="block text-white py-2">About</a>
-          <a href="#" class="block text-white py-2">Services</a>
-          <a href="#" class="block text-white py-2">Contact</a>
+        <div class="lg:hidden hidden relative bg-lightPanel py-2 w-[200px]  font-semibold" id="mobileMenu">
+          <div class="flex justify-end px-2 cursor-pointer">
+            <button id="exit">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="flex items-center gap-2 w-full hover:bg-gray-700 px-2">
+            <i class="fa-solid fa-house"></i>
+            <a href="#" class="block text-white py-2">Home</a>
+          </div>
+          <div class="flex items-center gap-2 w-full hover:bg-gray-700 px-2">
+            <i class="fa-solid fa-house"></i>
+            <a href="#" class="block text-white py-2">Home</a>
+          </div>
+          <div class="flex items-center gap-2 w-full hover:bg-gray-700 px-2">
+            <i class="fa-solid fa-house"></i>
+            <a href="#" class="block text-white py-2">Home</a>
+          </div>
+          <div class="flex items-center gap-2 w-full hover:bg-gray-700 px-2">
+            <i class="fa-solid fa-house"></i>
+            <a href="#" class="block text-white py-2">Home</a>
+          </div>
         </div>
       </nav>
 
