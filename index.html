@@ -13,33 +13,7 @@
     <!--Content wrapper (adjust values in config if needed)-->
   <div id="app" class="container flex flex-1 flex-col">
 
-    <!-- Sidebar -->
-    <nav class="bg-lightPanel text-white sm:hidden md:hidden hidden w-20  fixed top-0 left-0 flex flex-col items-center justify-between py-6 space-y-8">
-    <!-- Logo -->
-    <div class="w-10 h-10 bg-lime-500 rounded-full flex items-center justify-center">
-      <span class="text-xl font-bold">C</span>
-    </div>
-    
-    <!-- Sidebar Navigation Links -->
-    <div class="space-y-6">
-        <a href="#" class="flex flex-col items-center text-gray-300 hover:text-white">
-          <i class="fa-solid fa-chart-line text-lg"></i>
-          <span class="text-xs">Stats</span>
-        </a>
-        <a href="#" class="flex flex-col items-center text-gray-300 hover:text-white">
-          <i class="fa-solid fa-dumbbell text-lg"></i>
-          <span class="text-xs">Workouts</span>
-        </a>
-        <a href="#" class="flex flex-col items-center text-gray-300 hover:text-white">
-          <i class="fa-solid fa-calendar-days text-lg"></i>
-          <span class="text-xs">Calendar</span>
-        </a>
-      <a href="#" class="flex flex-col items-center text-gray-300 hover:text-white">
-        <i class="fa-solid fa-cog text-lg"></i>
-        <span class="text-xs">Settings</span>
-      </a>
-    </div>
-    </nav>
+   
 
     <!--Navbar content-->
     <nav class="navbar justify-between text text-white pt-5 relative flex">
@@ -71,23 +45,54 @@
           </div>
           <div class="flex items-center gap-2 w-full hover:bg-gray-700 px-2">
             <i class="fa-solid fa-house"></i>
-            <a href="#" class="block text-white py-2">Home</a>
+            <a href="#" class="block text-white py-2">Workouts</a>
           </div>
           <div class="flex items-center gap-2 w-full hover:bg-gray-700 px-2">
             <i class="fa-solid fa-house"></i>
-            <a href="#" class="block text-white py-2">Home</a>
+            <a href="#" class="block text-white py-2">Stats</a>
           </div>
           <div class="flex items-center gap-2 w-full hover:bg-gray-700 px-2">
             <i class="fa-solid fa-house"></i>
-            <a href="#" class="block text-white py-2">Home</a>
+            <a href="#" class="block text-white py-2">Settings</a>
           </div>
         </div>
       </nav>
 
     <!--Start of grid-->
-    <div class="flex flex-col lg:grid lg:grid-cols-12 gap-4 mt-24 flex-1">
+    <div class="flex flex-col justify-center lg:grid lg:grid-cols-6 gap-4 mt-24 flex-1">
+
+      <!-- Sidebar -->
+    <nav class="bg-lightPanel lg:flex sm:hidden hidden col-span-1 text-white w-20 flex flex-col items-center justify-between py-6 ">
+      <!-- Logo -->
+      <div class="w-10 h-10 bg-lime-500 rounded-full flex items-center justify-center">
+        <span class="text-xl font-bold">C</span>
+      </div>
+      
+      <!-- Sidebar Navigation Links -->
+      <div class="space-y-6">
+          <a href="#" class="flex flex-col items-center text-gray-300 hover:text-white">
+            <i class="fa-solid fa-chart-line text-lg"></i>
+            <span class="text-xs">Stats</span>
+          </a>
+          <a href="#" class="flex flex-col items-center text-gray-300 hover:text-white">
+            <i class="fa-solid fa-dumbbell text-lg"></i>
+            <span class="text-xs">Workouts</span>
+          </a>
+          <a href="#" class="flex flex-col items-center text-gray-300 hover:text-white">
+            <i class="fa-solid fa-calendar-days text-lg"></i>
+            <span class="text-xs">Calendar</span>
+          </a>
+        <a href="#" class="flex flex-col items-center text-gray-300 hover:text-white">
+          <i class="fa-solid fa-cog text-lg"></i>
+          <span class="text-xs">Settings</span>
+        </a>
+      </div>
+      </nav>   
+
+
+
       <!--Chart Card-->
-        <div class="bg-lightPanel text-white rounded-lg font-bold lg:col-span-8 py-2 px-4 shadow-md">
+        <div class="bg-lightPanel text-white rounded-lg font-bold lg:col-span-3 py-2 px-4 shadow-md">
             <div class="card bg-beige p-6 rounded-lg gap-6">
                 <!-- Text Content -->
                 <div class="text-content whitespace-nowrap h-full">
@@ -96,7 +101,7 @@
                             <h2 class="text-lg font-bold">Your Workout</h2>
                             <p class="text-sm font-semibold">Results for Today</p>
                         </div>
-                        <i class="fa-regular fa-calendar"></i>
+                        <i class="fa-regular fa-calendar cursor-pointer"></i>
                     </div>
                 </div>
                 <div class="chart-container mt-6 flex items-center justify-center">
@@ -106,7 +111,7 @@
         </div>
 
         <!--Activity Tracker Card-->
-        <div class="bg-accentBlue text-white rounded-lg col-span-4 py-4 px-4 font-bold shadow-md flex justify-center items-center">
+        <div class="bg-accentBlue text-white rounded-lg col-span-2 py-4 px-4 font-bold shadow-md flex justify-center items-center">
             <!--Header-->
             <div>
                 <div class="mb-4 justify-center items-center flex">
@@ -124,7 +129,7 @@
         </div>
 
         <!--Sleep Time -->
-        <div class="bg-lightPanel col-span-4 row-span-1 py-4 px-4 rounded-lg shadow-md text-white">
+        <div class="bg-lightPanel col-start-2 col-span-2 row-span-1 py-4 px-4 rounded-lg shadow-md text-white">
            <div class="flex flex-col justify-between h-full">
             <div class="flex justify-between">
               <p class="font-bold">Sleep Time</p>
@@ -137,7 +142,7 @@
         </div>
         
         <!--My Activities Card-->
-        <div class="bg-lightPanel flex flex-col text-white col-span-8 row-span-2 py-4 px-4 rounded-lg shadow-md font-bold ">
+        <div class="bg-lightPanel flex flex-col text-white col-span-3 row-span-2 py-4 px-4 rounded-lg shadow-md font-bold ">
           <div class="flex justify-between mb-4">
             <h1 class="font-bold">My Activities</h1>
             <div class="flex justify-center items-center cursor-pointer">
@@ -146,7 +151,7 @@
           </div>
           <div class="flex flex-col lg:items-center lg:flex-row gap-1 lg:w-full lg:h-full overflow-x-auto">
             <!--First card-->
-            <div id="child" class="bg-darkBackground hover:bg-gray-800 flex flex-col justify-between h-60 px-4 py-2 rounded-lg text-white font-thin sm:flex-1  ">
+            <div id="child" class="bg-darkBackground hover:bg-gray-800 flex flex-col justify-between lg:h-60  px-4 py-2 rounded-lg text-white font-thin lg:flex-1 ">
               <div class="flex justify-between">
                 <div class="">
                   <i class="fa-solid fa-person-running"></i>
@@ -159,7 +164,7 @@
               </div>
             </div>
             <!--Second card-->
-            <div id="child" class="bg-darkBackground hover:bg-gray-800 flex flex-col justify-between h-60 px-4 py-2 rounded-lg text-white font-thin sm:flex-1  ">
+            <div id="child" class="bg-darkBackground hover:bg-gray-800 flex flex-col justify-between lg:h-60 px-4 py-2 rounded-lg text-white font-thin lg:flex-1  ">
               <div class="flex justify-between">
                 <div class="">
                   <i class="fa-solid fa-person-running"></i>
@@ -172,7 +177,7 @@
               </div>
             </div>
             <!--Third card-->
-            <div id="child" class="bg-darkBackground hover:bg-gray-800 flex flex-col justify-between h-60 px-4 py-2 rounded-lg text-white font-thin sm:flex-1  ">
+            <div id="child" class="bg-darkBackground hover:bg-gray-800 flex flex-col justify-between lg:h-60 px-4 py-2 rounded-lg text-white font-thin lg:flex-1  ">
               <div class="flex justify-between">
                 <div class="">
                   <i class="fa-solid fa-person-running"></i>
@@ -185,7 +190,7 @@
               </div>
             </div>
             <!--Fourth card-->
-            <div id="child" class="bg-darkBackground hover:bg-gray-800 flex h-60 px-4 py-2 rounded-lg border border-dashed border-green-500 text-white font-thin sm:flex-1 cursor-pointer ">
+            <div id="child" class="bg-darkBackground hover:bg-gray-800 flex lg:h-60 px-4 py-2 rounded-lg border border-dashed border-green-500 text-white font-thin lg:flex-1 cursor-pointer ">
               <div class="flex flex-col gap-2 items-center justify-center w-full h-full">
                 <p>Add</p>
                 <i class="fa-solid fa-plus"></i>
@@ -195,8 +200,8 @@
         </div>
         
         <!--Weightloss card-->
-        <div class="bg-lightPanel col-span-4 row-span-1 py-4 px-4 rounded-lg text-white shadow-md">
-          <div class="flex flex-col justify-between h-full">
+        <div class="bg-lightPanel col-start-2 col-span-2 row-span-1 py-2 px-4 rounded-lg text-white shadow-md">
+          <div class="flex flex-col h-full justify-center items-center ">
             <p>Weight Loss Goal</p>
             <div class="p-4 rounded-lg w-full max-w-lg">
               <!-- Progress Bar Container -->
