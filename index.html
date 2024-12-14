@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Logify</title>
-  
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./dist/output.css">
   <link rel="stylesheet" href="./src/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,7 +14,7 @@
   <div id="app" class="container flex flex-1 flex-col">
 
     <!-- Sidebar -->
-    <nav class="bg-lightPanel text-white w-20  fixed top-0 left-0 flex flex-col items-center justify-between py-6 space-y-8">
+    <nav class="bg-lightPanel text-white sm:hidden w-20  fixed top-0 left-0 flex flex-col items-center justify-between py-6 space-y-8">
     <!-- Logo -->
     <div class="w-10 h-10 bg-lime-500 rounded-full flex items-center justify-center">
       <span class="text-xl font-bold">C</span>
@@ -42,13 +42,13 @@
     </nav>
 
     <!--Navbar content-->
-    <nav class="navbar flex justify-between text text-white pt-5 relative lg:flex sm:hidden md:hidden">
+    <nav class="navbar justify-between lg:flex md:flex text text-white pt-5 relative flex">
         <div class="flex flex-col justify-center">
             <h1 class="font-bold text-2xl ">Hi, Charlotte!</h1>
             <p class="text-xs font-semibold">Lets take a look at your activity</p>
         </div>
         
-        <div class="flex gap-4">
+        <div class="flex gap-4 hidden md:hidden">
             <button class="bg-white text-gray-700 px-2 rounded-lg text-xs w-44 shadow-sm"><i class="fa-solid fa-magnifying-glass mr-2"></i>Search</button>
             <button class="bg-accentBlue text-white px-2 rounded-lg text-xs w-20 shadow-md hover:bg-custombeige">login</button>
         </div> <!-- Hamburger Button (visible on smaller screens) -->
@@ -68,9 +68,9 @@
       </nav>
 
     <!--Start of grid-->
-    <div class="lg:grid lg:grid-cols-12 sm:flex sm:flex-col gap-4 mt-24 flex-1">
+    <div class="flex flex-col lg:grid lg:grid-cols-12 gap-4 mt-24 flex-1">
       <!--Chart Card-->
-        <div class="bg-lightPanel text-white rounded-lg font-bold col-span-8 py-2 px-4 shadow-md">
+        <div class="bg-lightPanel text-white rounded-lg font-bold lg:col-span-8 py-2 px-4 shadow-md">
             <div class="card bg-beige p-6 rounded-lg gap-6">
                 <!-- Text Content -->
                 <div class="text-content whitespace-nowrap h-full">
@@ -127,7 +127,7 @@
               <p class="font-semibold text-xs"><i class="fa-solid fa-plus"></i> Add New</p>
             </div>
           </div>
-          <div class="flex flex-col lg:items-center lg:flex-row  gap-1 w-full h-full overflow-x-auto">
+          <div class="flex flex-col lg:items-center lg:flex-row gap-1 lg:w-full lg:h-full overflow-x-auto">
             <!--First card-->
             <div id="child" class="bg-darkBackground hover:bg-gray-800 flex flex-col justify-between h-60 px-4 py-2 rounded-lg text-white font-thin sm:flex-1  ">
               <div class="flex justify-between">
