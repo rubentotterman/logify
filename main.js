@@ -75,3 +75,44 @@ const workedOutDays = [
   const workoutDaysElement = document.getElementById('workout-days');
   workoutDaysElement.textContent = `${totalWorkoutDays} Days`;
   
+  document.addEventListener('DOMContentLoaded', () => {
+    const ctx = document.getElementById('sleepChart').getContext('2d');
+  
+    const sleepData = {
+      labels: ['Actual', 'Goal'],
+      datasets: [{
+        label: 'Sleep Time',
+        data: [6, 8], // Example data: Actual sleep vs. Goal
+        backgroundColor: [
+          'rgba(54, 162, 235, 0.2)', // Light blue for actual sleep
+          'rgba(255, 206, 86, 0.2)'  // Light orange for goal
+        ],
+        borderColor: [
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)'
+        ],
+        borderWidth: 1
+      }]
+    };
+  
+    new Chart(ctx, {
+      type: 'bar',
+      data: sleepData,
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'Hours'
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            display: false // Hide legend if not needed
+          }
+        }
+      }
+    });
+  });

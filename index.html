@@ -13,8 +13,6 @@
     <!--Content wrapper (adjust values in config if needed)-->
   <div id="app" class="container flex flex-1 flex-col">
 
-   
-
     <!--Navbar content-->
     <nav class="navbar justify-between text text-white pt-5 relative flex">
         <div class="flex flex-col justify-center">
@@ -59,37 +57,35 @@
       </nav>
 
     <!--Start of grid-->
-    <div class="flex flex-col justify-center lg:grid lg:grid-cols-6 gap-4 mt-24 flex-1">
+    <div class="flex flex-col justify-center lg:grid lg:grid-cols-6 gap-2 mt-24 flex-1">
 
       <!-- Sidebar -->
-    <nav class="bg-lightPanel lg:flex sm:hidden hidden col-span-1 text-white w-20 flex flex-col items-center justify-between py-6 ">
+    <nav class="bg-lightPanel lg:flex sm:hidden hidden col-span-1 text-white w-20 rounded-lg flex flex-col items-center justify-between pt-6 ">
       <!-- Logo -->
-      <div class="w-10 h-10 bg-lime-500 rounded-full flex items-center justify-center">
+      <div class="w-10 h-10 mb-6 bg-lime-500 rounded-full flex items-center justify-center cursor-pointer">
         <span class="text-xl font-bold">C</span>
       </div>
       
       <!-- Sidebar Navigation Links -->
-      <div class="space-y-6">
-          <a href="#" class="flex flex-col items-center text-gray-300 hover:text-white">
+      <div class="space-y-6 w-full">
+          <a href="#" class="flex flex-col items-center hover:bg-gray-700  text-gray-300 hover:text-white">
             <i class="fa-solid fa-chart-line text-lg"></i>
             <span class="text-xs">Stats</span>
           </a>
-          <a href="#" class="flex flex-col items-center text-gray-300 hover:text-white">
+          <a href="#" class="flex flex-col items-center hover:bg-gray-700  text-gray-300 hover:text-white">
             <i class="fa-solid fa-dumbbell text-lg"></i>
             <span class="text-xs">Workouts</span>
           </a>
-          <a href="#" class="flex flex-col items-center text-gray-300 hover:text-white">
+          <a href="#" class="flex flex-col items-center hover:bg-gray-700  text-gray-300 hover:text-white">
             <i class="fa-solid fa-calendar-days text-lg"></i>
             <span class="text-xs">Calendar</span>
           </a>
-        <a href="#" class="flex flex-col items-center text-gray-300 hover:text-white">
+        <a href="#" class="flex flex-col items-center pb-2 hover:bg-gray-700 min-w-full text-gray-300 hover:text-white">
           <i class="fa-solid fa-cog text-lg"></i>
           <span class="text-xs">Settings</span>
         </a>
       </div>
       </nav>   
-
-
 
       <!--Chart Card-->
         <div class="bg-lightPanel text-white rounded-lg font-bold lg:col-span-3 py-2 px-4 shadow-md">
@@ -130,15 +126,16 @@
 
         <!--Sleep Time -->
         <div class="bg-lightPanel col-start-2 col-span-2 row-span-1 py-4 px-4 rounded-lg shadow-md text-white">
-           <div class="flex flex-col justify-between h-full">
+          <div class="flex flex-col justify-between h-full">
             <div class="flex justify-between">
               <p class="font-bold">Sleep Time</p>
-              <i class="fa-solid fa-pen-to-square"></i>
+              <i class="fa-solid fa-pen-to-square cursor-pointer"></i>
             </div>
             <div>
-              <p>Goal: <span class="font-bold"> 8 hours</span></p>
+              <p>Goal: <span class="font-bold">8 hours</span></p>
+              <canvas id="sleepChart" class="h-48 w-full mt-2"></canvas>
             </div>
-           </div>
+          </div>
         </div>
         
         <!--My Activities Card-->
@@ -219,6 +216,7 @@
             <p><span class="font-bold"> 80% </span> completed</p>
           </div>  
         </div>
+
     </div><!--End of grid-->
   </div><!--End of wrapper-->
 
