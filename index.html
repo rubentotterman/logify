@@ -143,11 +143,11 @@
           <div class="flex justify-between mb-4">
             <h1 class="font-bold">My Activities</h1>
             <div class="flex justify-center items-center cursor-pointer">
-              <p class="font-semibold text-xs"><i class="fa-solid fa-plus"></i> Add New</p>
+              <p id="addCardBtn" class="font-semibold text-xs"><i class="fa-solid fa-plus"></i> Add New</p>
             </div>
           </div>
-          <div class="flex flex-col lg:items-center lg:flex-row gap-1 lg:w-full lg:h-full overflow-x-auto">
-            <i class="fa-solid fa-chevron-left sm:hidden hidden lg:flex absolute left-3 top-14 bg-gray-800 hover:bg-blue-500 rounded-sm py-2 px-2 cursor-pointer"></i>
+          <div id="scrollContainer" class="flex flex-col lg:items-center lg:flex-row gap-1 lg:w-full lg:h-full overflow-x-auto whitespace-nowrap scroll-smooth">
+            <i id="scrollLeftBtn" class="fa-solid fa-chevron-left sm:hidden hidden md:top-12 lg:flex absolute left-3 top-14 bg-gray-800 hover:bg-blue-500 rounded-sm py-2 px-2 cursor-pointer"></i>
             <!--First card-->
             <div id="child" class="bg-darkBackground hover:bg-gray-800 flex flex-col justify-between lg:h-60  px-4 py-2 rounded-lg text-white font-thin lg:flex-1 ">
               <div class="flex justify-between">
@@ -187,15 +187,8 @@
                 <p class="font-bold">5km</p>
               </div>
             </div>
-            <!--Fourth card-->
-            <div id="child" class="bg-darkBackground hover:bg-gray-800 flex lg:h-60 px-4 py-2 rounded-lg border border-dashed border-green-500 text-white font-thin lg:flex-1 cursor-pointer ">
-              <div class="flex flex-col gap-2 items-center justify-center w-full h-full">
-                <p>Add</p>
-                <i class="fa-solid fa-plus"></i>
-              </div>
-            </div>
-          </div>
-          <i class="fa-solid fa-chevron-right sm:hidden hidden lg:flex absolute right-3 top-14 bg-gray-800 hover:bg-blue-500 rounded-sm py-2 px-2 cursor-pointer"></i>
+          <i id="scrollRightBtn" class="fa-solid fa-chevron-right sm:hidden hidden md:top-12 lg:flex absolute right-3 top-14 bg-gray-800 hover:bg-blue-500 rounded-sm py-2 px-2 cursor-pointer"></i>
+        </div>
         </div>
         
         <!--Weightloss card-->

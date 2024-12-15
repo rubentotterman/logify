@@ -1,3 +1,40 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollContainer = document.getElementById("scrollContainer");
+  const addCardBtn = document.getElementById("addCardBtn");
+
+  // Add new card functionality
+  addCardBtn.addEventListener("click", () => {
+    // Create a new card
+    const newCard = document.createElement("div");
+    newCard.className =
+      "bg-darkBackground hover:bg-gray-800 flex flex-col justify-between lg:h-60 px-4 py-2 rounded-lg text-white font-thin lg:flex-1";
+
+    // Add content to the new card
+    const cardContent = `
+      <div class="flex justify-between">
+        <div><i class="fa-solid fa-person-running"></i></div>
+        <i class="fa-solid fa-chevron-up"></i>
+      </div>
+      <div class="flex justify-between gap-4">
+        <p class="font-thin">New Card</p>
+        <p class="font-bold">Custom Data</p>
+      </div>
+    `;
+    newCard.innerHTML = cardContent;
+
+    // Append the new card to the scroll container
+    scrollContainer.appendChild(newCard);
+
+    // Optionally, scroll to the newly added card
+    scrollContainer.scrollBy({
+      left: scrollContainer.scrollWidth, // Scrolls to the end of the container
+      behavior: "smooth",
+    });
+  });
+});
+
+
+
 
 //Hamburger menu logic
 function toggleMenu() {
@@ -9,6 +46,26 @@ document.getElementById("hamburgerButton").addEventListener("click", toggleMenu)
 
 const exit = document.getElementById('exit');
 exit.addEventListener('click', toggleMenu);
+
+const scrollContainer = document.getElementById("scrollContainer");
+const scrollLeftBtn = document.getElementById("scrollLeftBtn");
+const scrollRightBtn = document.getElementById("scrollRightBtn");
+
+scrollLeftBtn.addEventListener("click", () => {
+  scrollContainer.scrollBy({
+    left: -200, // Adjust this value to control scroll distance
+    behavior: "smooth",
+  });
+});
+
+// Scroll Right
+scrollRightBtn.addEventListener("click", () => {
+  scrollContainer.scrollBy({
+    left: 200, // Adjust this value to control scroll distance
+    behavior: "smooth", // Enables smooth scrolling
+  });
+});
+
 
 
 //Workout chart logic
