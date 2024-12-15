@@ -110,7 +110,7 @@ const workedOutDays = [
         },
         plugins: {
           legend: {
-            display: false // Hide legend if not needed
+            display: false
           }
         }
       }
