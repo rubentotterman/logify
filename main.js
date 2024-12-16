@@ -1,3 +1,10 @@
+import { createClient } from '@supabase/supabase-js';
+
+const supabaseUrl = 'https://supabase.com/dashboard/project/ynaebzwplirfhvoxrvnz/auth/users'; // Replace with your Supabase URL
+const SUPABASE_KEY = 'SUPABASE_CLIENT_API_KEY';
+export const supabase = createClient(supabaseUrl, supabaseKey);
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const scrollContainer = document.getElementById("scrollContainer");
   const addCardBtn = document.getElementById("addCardBtn");
