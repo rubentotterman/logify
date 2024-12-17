@@ -10,6 +10,10 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true, // Clean the dist folder before building
   },
+  resolve: {
+    extensions: ['.js'], // Add default extensions
+    modules: [path.resolve(__dirname, 'node_modules'), 'node_modules'], // Ensure node_modules is searched
+  },
   module: {
     rules: [
       {
