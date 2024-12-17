@@ -9,13 +9,9 @@ const supabaseUrl = 'https://ynaebzwplirfhvoxrvnz.supabase.co';
 const supabaseKey = process.env.SUPABASE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InluYWViendwbGlyZmh2b3hydm56Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzQzMDg4NTAsImV4cCI6MjA0OTg4NDg1MH0.Ac6HePbKTdeCVDWAe8KIZOO4iXzIuLODWKRzyhqmfpA';
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-console.log('Supabase client initialized', supabase);
-
 // Main Script
 document.addEventListener("DOMContentLoaded", async () => {
-  console.log("DOM fully loaded and parsed");
   
-
   // DOM Elements
   const scrollContainer = document.getElementById("scrollContainer");
   const addCardBtn = document.getElementById("addCardBtn");
@@ -33,28 +29,74 @@ document.addEventListener("DOMContentLoaded", async () => {
   const loginForm = document.getElementById("loginForm");
   const discordLoginBtn = document.getElementById("discordLoginBtn");
 
+//Check if the user is logged in
+document.addEventListener('DOMContentLoaded', () => {
+  const discordLoginBtn = document.getElementById('discordLoginBtn');
+  const logoutButton = document.getElementById('logoutBtn');
+  const userWelcome = document.getElementById('userWelcome');
 
-     // Trigger Discord OAuth
-    discordLoginBtn.addEventListener("click", async () => {
-      try {
-        const { data, error } = await supabase.auth.signInWithOAuth({
-          provider: 'discord',
-          options: {
-            redirectTo: `${window.location.origin}/dashboard.html`, // Redirect after login
-          },
-        });
+  discordLoginBtn.addEventListener('click', async () => {
+    try {
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: 'discord',
+        options: {
+          redirectTo: `${window.location.origin}/index.html`, // Replace with your desired page
+        },
+      });
   
-        if (error) {
-          console.error('Error during Discord login:', error.message);
-          alert('Login failed. Please try again.');
-        } else {
-          console.log('Redirecting to Discord...');
-        }
-      } catch (err) {
-        console.error('Unexpected error:', err);
+      if (error) {
+        console.error('Error during Discord login:', error.message);
+        alert('Login failed. Please try again.');
       }
-    });
+    } catch (err) {
+      console.error('Unexpected error:', err.message);
+    }
   });
+
+  async function checkUser() {
+    const { data: { user }, error } = await supabase.auth.getUser();
+
+    if(error) {
+      console.error("Error fetching user: ", error.message);
+    }
+
+    if(user) {
+      //User is logged in
+      console.log('User is logged in:', user);
+
+      //update ui
+      loginBtn?.classList.add('hidden'); //Hide login button
+      logoutButton?.classList.remove('hidden'); //show logout button
+      userWelcome.textContent = `Welcome, ${user.user_metadata?.name || 'User'}!`;
+    } else {
+      //user is not logged in
+      console.log('No user logged in');
+      loginBtn?.classList.remove('hidden');
+      logoutButton?.classList.add('hidden');
+      userWelcome.textContent = 'Welcome, Guest!';
+    }
+  }
+
+    // Login with Discord
+    loginButton?.addEventListener('click', async () => {
+      await supabase.auth.signInWithOAuth({
+        provider: 'discord',
+        options: {
+          redirectTo: window.location.origin, // Redirect back to the same page
+        },
+      });
+    });
+  
+    // Logout
+    logoutButton?.addEventListener('click', async () => {
+      await supabase.auth.signOut();
+      window.location.reload(); // Refresh page to show logged-out state
+    });
+  
+    // Run the checkUser function
+    await checkUser();
+  });
+
 
 
   //Show the login popup when the login button is clicked
