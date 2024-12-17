@@ -1,4 +1,10 @@
+/*!**********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/main.css ***!
+  \**********************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap);
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/main.css (1) ***!
+  \**************************************************************************************************************/
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -540,11 +546,17 @@ video {
 .visible {
   visibility: visible;
 }
+.fixed {
+  position: fixed;
+}
 .absolute {
   position: absolute;
 }
 .relative {
   position: relative;
+}
+.inset-0 {
+  inset: 0px;
 }
 .left-3 {
   left: 0.75rem;
@@ -560,6 +572,9 @@ video {
 }
 .top-5 {
   top: 1.25rem;
+}
+.z-20 {
+  z-index: 20;
 }
 .col-span-1 {
   grid-column: span 1 / span 1;
@@ -578,6 +593,9 @@ video {
 }
 .row-span-2 {
   grid-row: span 2 / span 2;
+}
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 .mb-4 {
   margin-bottom: 1rem;
@@ -660,6 +678,9 @@ video {
 .max-w-lg {
   max-width: 32rem;
 }
+.max-w-sm {
+  max-width: 24rem;
+}
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -710,6 +731,9 @@ video {
 .whitespace-nowrap {
   white-space: nowrap;
 }
+.rounded {
+  border-radius: 0.25rem;
+}
 .rounded-full {
   border-radius: 9999px;
 }
@@ -719,9 +743,20 @@ video {
 .rounded-sm {
   border-radius: 0.125rem;
 }
+.border {
+  border-width: 1px;
+}
 .bg-accentBlue {
   --tw-bg-opacity: 1;
   background-color: rgb(89 115 255 / var(--tw-bg-opacity, 1));
+}
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+}
+.bg-blue-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
 }
 .bg-darkBackground {
   --tw-bg-opacity: 1;
@@ -747,11 +782,17 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
+.bg-opacity-50 {
+  --tw-bg-opacity: 0.5;
+}
 .p-4 {
   padding: 1rem;
 }
 .p-6 {
   padding: 1.5rem;
+}
+.p-8 {
+  padding: 2rem;
 }
 .px-1 {
   padding-left: 0.25rem;

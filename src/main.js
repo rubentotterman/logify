@@ -9,9 +9,12 @@ const supabaseUrl = 'https://ynaebzwplirfhvoxrvnz.supabase.co';
 const supabaseKey = process.env.SUPABASE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InluYWViendwbGlyZmh2b3hydm56Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzQzMDg4NTAsImV4cCI6MjA0OTg4NDg1MH0.Ac6HePbKTdeCVDWAe8KIZOO4iXzIuLODWKRzyhqmfpA';
 const supabase = createClient(supabaseUrl, supabaseKey);
 
+console.log('Supabase client initialized', supabase);
+
 // Main Script
 document.addEventListener("DOMContentLoaded", async () => {
   console.log("DOM fully loaded and parsed");
+  
 
   // DOM Elements
   const scrollContainer = document.getElementById("scrollContainer");
@@ -21,9 +24,48 @@ document.addEventListener("DOMContentLoaded", async () => {
   const exitButton = document.getElementById("exit");
   const scrollLeftBtn = document.getElementById("scrollLeftBtn");
   const scrollRightBtn = document.getElementById("scrollRightBtn");
-  const workoutDaysElement = document.getElementById('workout-days');
-  const workoutBarChartCanvas = document.getElementById('workoutBarChart');
-  const sleepChartCanvas = document.getElementById('sleepChart');
+  let workoutDaysElement = document.getElementById('workout-days');
+  const workoutBarChartCanvas = document.getElementById('workoutBarChartCanvas');
+  const sleepChartCanvas = document.getElementById('sleepChartCanvas');
+  const loginBtn = document.getElementById("loginBtn");
+  const loginPopup = document.getElementById("loginPopup");
+  const closePopup = document.getElementById("closePopup");
+  const loginForm = document.getElementById("loginForm");
+  const discordLoginBtn = document.getElementById("discordLoginBtn");
+
+
+     // Trigger Discord OAuth
+    discordLoginBtn.addEventListener("click", async () => {
+      try {
+        const { data, error } = await supabase.auth.signInWithOAuth({
+          provider: 'discord',
+          options: {
+            redirectTo: `${window.location.origin}/dashboard.html`, // Redirect after login
+          },
+        });
+  
+        if (error) {
+          console.error('Error during Discord login:', error.message);
+          alert('Login failed. Please try again.');
+        } else {
+          console.log('Redirecting to Discord...');
+        }
+      } catch (err) {
+        console.error('Unexpected error:', err);
+      }
+    });
+  });
+
+
+  //Show the login popup when the login button is clicked
+  loginBtn.addEventListener("click", () => {
+    loginPopup.classList.remove("hidden");
+    });
+
+  //close popup when button is clicked
+  closePopup.addEventListener("click", () => {
+    loginPopup.classList.add("hidden");
+  });
 
   // Fetch data from Supabase (Example)
   async function fetchSupabaseData() {
@@ -155,5 +197,4 @@ document.addEventListener("DOMContentLoaded", async () => {
         plugins: { legend: { display: false } },
       },
     });
-  }
-});
+  };
