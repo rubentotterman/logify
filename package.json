@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "webpack --config webpack.config.cjs",
+    "build:css": "npx tailwindcss -i ./src/main.css -o ./dist/styles.css --minify",
     "start": "webpack serve --config webpack.config.cjs"
   },
   "keywords": [],
